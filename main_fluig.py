@@ -19,6 +19,7 @@ consumer_key = os.getenv('CONSUMER_KEY')
 consumer_secret = os.getenv('CONSUMER_SECRET')
 access_token = os.getenv('ACCESS_TOKEN')
 access_token_secret = os.getenv('ACCESS_TOKEN_SECRET')
+PORT = os.getenv('PORT')
 
 # Função para criar um arquivo JSON com Título, ID e URL de download de todos os vídeos de Treinamento
 # def store_video_info():
@@ -227,4 +228,4 @@ def process_questions():
     return jsonify({'response': chat_reply})
 
 if __name__ == '__main__':
-    app.run()#port=5000)
+    app.run(PORT)
